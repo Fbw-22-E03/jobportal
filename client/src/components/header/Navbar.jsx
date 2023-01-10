@@ -11,7 +11,7 @@ function MainNav() {
 		<nav className="navbar navbar-expand-sm bg-primary">
 			<div className="container-fluid">
 				<Link className="navbar-brand text-light" to="/">
-					Navbar
+					JobPortal
 				</Link>
 				<button
 					className="navbar-toggler"
@@ -35,33 +35,24 @@ function MainNav() {
 								Home
 							</Link>
 						</li>
-
-						<li className="nav-item dropdown">
-							<a
-								className="nav-link dropdown-toggle text-light"
-								href="#"
-								role="button"
-								data-bs-toggle="dropdown"
-								aria-expanded="false"
+						<li className="nav-item ">
+							<Link
+								className="nav-link text-light"
+								aria-current="page"
+								to="/"
 							>
-								Products
-							</a>
-							<ul className="dropdown-menu">
-								<li>
-									<Link className="dropdown-item" to="/products/list">
-										List
-									</Link>
-								</li>
-								<li>
-									<Link className="dropdown-item" to="/products/add">
-										Add
-									</Link>
-								</li>
-							</ul>
+								Jobs
+							</Link>
 						</li>
+
+						
 					</ul>
-                        <span className="nav-item">
-                            <Link to="/login" className="nav-link text-light me-3">Login</Link>
+                        <span className="nav-item btn">
+                            <Link to="/login" className="nav-link me-3 text-light">Signin</Link>
+                        </span>
+                        
+						<span className="nav-item btn btn-outline-light">
+                            <Link to="/register" className="nav-link px-2 ">Signup</Link>
                         </span>
 				</div>
 			</div>

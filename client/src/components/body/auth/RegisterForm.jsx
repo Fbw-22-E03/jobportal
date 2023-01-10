@@ -1,12 +1,13 @@
 import React, {useState} from 'react';
 import axios from 'axios';
+import { FaUserPlus } from 'react-icons/fa';
 
 const formStyle = {
     position: 'fixed',
     top: '70px',
     right: '30px',
     maxWidth: '650px',
-    backgroundColor: '#c3c9ca',
+    backgroundColor: '#ebdaf8',
     padding: '3rem',
     borderRadius: '5px'
 }
@@ -44,28 +45,29 @@ function RegisterForm() {
                 {/* <div className="tab-pane fade" id="pills-register" role="tabpanel" aria-labelledby="tab-register"> */}
                     <form onSubmit={submitHandler}>
                         <div className="text-center mb-3">
-                            <p className='display-5 mb-5'>Sign up</p>
+                        <p className='display-5 mb-1'><FaUserPlus /></p>
+                            <p className='display-6 mb-4'>Sign up</p>
                         </div>
                         {/*<!-- Name input --> */}
-                        <div className="form-outline mb-3">
-                            <label className="form-label" htmlFor="registerName">FullName</label>
+                        <div className="form-outline mb-2">
                             <input type="text" id="registerName" name='fullname' className="form-control"/>
+                            <label className="form-label" htmlFor="registerName">FullName</label>
                         </div>
                         
                         {/*<!-- Email input --> */}
-                        <div className="form-outline mb-3">
-                            <label className="form-label" htmlFor="registerEmail">Email</label>
+                        <div className="form-outline mb-2">
                             <input type="email" id="registerEmail" name='email' className="form-control" />
+                            <label className="form-label" htmlFor="registerEmail">Email</label>
                         </div>
                         {/*<!-- Password input --> */}
-                        <div className="form-outline mb-3">
-                            <label className="form-label" htmlFor="registerPassword">Password</label>
+                        <div className="form-outline mb-2">
                             <input type="password" id="registerPassword" name='password' className="form-control" />
+                            <label className="form-label" htmlFor="registerPassword">Password</label>
                         </div>
                         {/*<!-- Repeat Password input --> */}
-                        <div className="form-outline mb-3">
-                            <label className="form-label" htmlFor="registerRepeatPassword">Repeat password</label>
+                        <div className="form-outline mb-2">
                             <input type="password" id="registerRepeatPassword" name='confirm' className="form-control" />
+                            <label className="form-label" htmlFor="registerRepeatPassword">Repeat password</label>
                         </div>
                         
                         {/*<!-- Submit button --> */}

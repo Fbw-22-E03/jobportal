@@ -1,13 +1,14 @@
 import axios from 'axios';
 import React, {useState} from 'react'
 import { Link } from 'react-router-dom'
+import { FaUser } from 'react-icons/fa';
 
 const formStyle = {
     position: 'fixed',
     top: '70px',
     right: '30px',
     maxWidth: '650px',
-    backgroundColor: '#c3c9ca',
+    backgroundColor: '#ebdaf8',
     padding: '3rem',
     borderRadius: '5px'
 }
@@ -45,8 +46,9 @@ function LoginForm() {
             <div className="tab-content">
                 <div className="tab-pane fade show active" id="pills-login" role="tabpanel" aria-labelledby="tab-login">
                     <form onSubmit={submitHandler}>
-                        
-                        <p className="text-center display-5 mb-5">Sign in</p>
+                        <p className="text-center display-5 mb-1"><FaUser /></p>
+                        <p className="text-center display-6 mb-4">Sign in</p>
+
                         {/*<!-- Email input --> */}
                         <div className="form-outline mb-4">
                             <input type="email" id="loginName" name="email" className="form-control" onChange={changeHandler}
